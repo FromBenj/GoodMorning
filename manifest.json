@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Good Morning Extension",
+  "description": "Get inspired everyday",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["script.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "img/good-morning.png"
+  },
+  "permissions": [
+    "unlimitedStorage"
+  ]
+}

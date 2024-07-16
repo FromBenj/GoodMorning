@@ -1,0 +1,30 @@
+:root {
+    scrollbar-width: thin;
+}
+
+#favorites-section {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+#favorite-header {
+    margin-top: 3rem;
+}
+
+#favorite-container {
+    border-top: solid black;
+    position: relative;
+}
+
+#circle-decoration {
+    height: 30px;
+    width: 30px;
+    border: black solid;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}

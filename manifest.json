@@ -6,15 +6,16 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["styles.css"],
-      "js": ["script.js"]
+      "css": ["css/styles.css", "css/favorite.css"],
+      "js": ["js/quote.js", "js/favorite.js"]
     }
   ],
+  "background": {"service_worker": "js/background.js"},
   "action": {
-    "default_popup": "index.html",
+    "default_popup": "html/index.html",
     "default_icon": "img/good-morning.png"
   },
   "permissions": [
-    "unlimitedStorage"
+    "storage"
   ]
 }

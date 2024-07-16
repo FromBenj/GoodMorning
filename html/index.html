@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Good Morning Extension</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/favorite.css">
+</head>
+<body>
+    <div id="main-container">
+        <div class="close-button-container">
+            <img id="close-button" src="../img/close.svg" alt="close button" width="17" height="auto" />
+        </div>
+        <header>
+            <h1 class="x-margin-normal">Quote of the day</h1>
+            <img class="x-margin-normal" src="../img/bulb.svg" alt="bulb" width="25" height="auto" />
+        </header>
+        <div class="quote-container">
+            <div id="new-quote" class="quote"></div>
+            <div id="new-quote-author" class="author"></div>
+        </div>
+        <button id="favorite-section-button">
+            Favorite quotes
+        </button>
+        <button id="like">
+            <img src="../img/heart.svg" alt="like button" width="25" height="auto" />
+        </button>
+    </div>
+    <div id="favorites-section"></div>
+
+    <script src="../js/favorite.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/quote.js"></script>
+</body>
+</html>

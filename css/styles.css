@@ -1,0 +1,85 @@
+:root {
+    --main-green: #63E6BE;
+    --main-grey: darkgrey;
+}
+
+#main-container {
+    min-width: 500px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.x-margin-normal {
+    margin: 0 0.5rem;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.quote {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.author {
+    color: var(--main-grey);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+#favorite-section-button {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    font-size: 17px;
+    text-align: end;
+    padding: 4px 6px;
+    font-weight: bold;
+    border: 0;
+    background-color: inherit;
+    color: var(--main-green);
+    cursor: pointer;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+}
+#favorite-page-button:hover {
+    transform: scale(1.1);
+}
+
+#like {
+    position: absolute;
+    right: 0;
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#like:hover {
+    transform: scale(1.1);
+}
+
+.close-button-container{
+    display: flex;
+    justify-content: end;
+}
+
+#close-button {
+    padding: 0 6px;
+    cursor: pointer;
+}

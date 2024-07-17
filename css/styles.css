@@ -82,4 +82,5 @@ header {
 #close-button {
     padding: 0 6px;
     cursor: pointer;
+    transform: rotate(-135deg);
 }

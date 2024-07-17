@@ -28,3 +28,19 @@
     display: flex;
     justify-content: center;
 }
+
+.favorite-quote-container {
+    padding: 1rem 0;
+    position: relative;
+    border-bottom: solid var(--main-green) 2px;
+
+}
+
+.remove-favorite-button {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
+}

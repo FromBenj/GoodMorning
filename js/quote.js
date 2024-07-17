@@ -39,6 +39,7 @@ function openFavoriteSection() {
         const favoriteSection = document.getElementById('favorites-section');
         favoriteSection.style.display = 'block';
         favoriteSectionButton.style.display = 'none';
+        removeFavoriteAction();
     });
 }
 openFavoriteSection();
@@ -49,7 +50,6 @@ function closePopup() {
         window.close();
     });
 }
-
 closePopup();
 
 

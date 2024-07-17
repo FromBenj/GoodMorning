@@ -3,11 +3,10 @@ function renderFavoritesSection() {
         .then(response => response.text())
         .then(data => {
             document.getElementById("favorites-section").innerHTML = data;
-            getFavorites();
+            includeFavorites();
             closeFavoriteSection();
         });
 }
-
 renderFavoritesSection();
 
 function closeFavoriteSection() {

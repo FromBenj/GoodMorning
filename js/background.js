@@ -1,3 +1,8 @@
+// Clear all local storage
+// chrome.storage.local.clear();
+
+const specialKeys = ["updateTime", "lastQuote"];
+
 function addToFavorites() {
     const like = document.getElementById('like');
     like.addEventListener('click', (e) => {
@@ -53,8 +58,10 @@ function includeFavorites() {
     const favoriteContainer = document.getElementById('favorite-quotes-container');
     chrome.storage.local.get(null, (quotes) => {
         for (const key in quotes) {
-            let favoriteQuote = createFavoriteDiv(key, quotes[key].quote, quotes[key].author);
-            favoriteContainer.appendChild(favoriteQuote);
+            if (!specialKeys.includes(key)) {
+                let favoriteQuote = createFavoriteDiv(key, quotes[key].quote, quotes[key].author);
+                favoriteContainer.appendChild(favoriteQuote);
+            }
         }
         removeFavoriteAction();
         removeLastFavoriteBorder();

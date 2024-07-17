@@ -12,13 +12,52 @@ async function getRandomQuote() {
         throw new Error(message);
     }
     const quote = await response.json();
+    chrome.storage.local.set({lastQuote: quote[0]});
 
     return quote[0];
 }
-getRandomQuote().then((data) =>  {
-    quoteData(data);
-    keepMainContainerHeight();
-});
+
+function renderRandomQuote() {
+    getRandomQuote().then((data) =>  {
+        quoteData(data);
+        keepMainContainerHeight();
+    });
+}
+
+function updateQuote() {
+    chrome.storage.local.get("updateTime", (data) => {
+        console.log(data)
+        if (data.updateTime === undefined) {
+            const updateTime = setUpdateTime();
+            chrome.storage.local.set({updateTime: updateTime});
+            renderRandomQuote();
+        } else {
+            const updateTime = new Date(data.updateTime);
+            const newUpdateTime = new Date(setUpdateTime());
+            if (newUpdateTime.getDate() > updateTime.getDate() && newUpdateTime.getHours() > updateTime.getHours()) {
+                chrome.storage.local.set({updateTime: newUpdateTime.valueOf()});
+                renderRandomQuote();
+            } else {
+                chrome.storage.local.get("lastQuote", (data) => {
+                    quoteData(data.lastQuote);
+                    keepMainContainerHeight();
+                });
+            }
+        }
+    });
+}
+updateQuote();
+
+function setUpdateTime() {
+    let updateTime = new Date();
+    updateTime.setHours(8, 0, 0);
+    if (updateTime. getHours() < 8) {
+        updateTime.setDate(updateTime.getDate() - 1);
+    }
+
+    return updateTime.valueOf();
+}
+
 
 function quoteData(data) {
     const quote = document.getElementById('new-quote');
@@ -51,5 +90,3 @@ function closePopup() {
     });
 }
 closePopup();
-
-

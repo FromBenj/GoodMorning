@@ -20,5 +20,5 @@ ___
 
 ## APIs
 ___
-[Quotable API](https://github.com/lukePeavey/quotable ) | Thanks @lukePeavey 🙏 \
-[Chrome Storage API](https://developer.chrome.com/docs/extensions/reference/api/storage) 
+<a href="https://github.com/lukePeavey/quotable" target="_blank">Quotable API</a> | Thanks @lukePeavey 🙏 \
+<a href="https://developer.chrome.com/docs/extensions/reference/api/storage" target="_blank">Chrome Storage API</a>

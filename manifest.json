@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Good Morning Extension",
+  "name": "Good Morning",
   "description": "Get inspired everyday",
   "version": "1.0",
   "content_scripts": [

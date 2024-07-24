@@ -26,7 +26,6 @@ function renderRandomQuote() {
 
 function updateQuote() {
     chrome.storage.local.get("updateTime", (data) => {
-        console.log(data)
         if (data.updateTime === undefined) {
             const updateTime = setUpdateTime();
             chrome.storage.local.set({updateTime: updateTime});
